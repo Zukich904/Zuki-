@@ -140,7 +140,11 @@ nav a:hover {
   </div>
     </div>
     <div style="margin-top:15px;">
-      ❤️ 0 &nbsp;&nbsp; 💬 0 &nbsp;&nbsp; ↗️ Share
+      <button onclick="likePost()" style="border:none; background:none; font-size:16px; cursor:pointer;">
+  ❤️ <span id="likeCount">0</span>
+</button>
+&nbsp;&nbsp;
+💬 0 &nbsp;&nbsp; ↗️ Share
     </div>
   </div>
 
@@ -166,6 +170,13 @@ nav a:hover {
   <footer>
     <p>© 2026 Zukiç. Haki zote zimehifadhiwa.</p>
   </footer>
+<script>
+  let likes = 0;
 
+  function likePost() {
+    likes++;
+    document.getElementById("likeCount").textContent = likes;
+  }
+</script>
 </body>
 </html>
