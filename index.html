@@ -437,6 +437,10 @@
     <h2>🔐 Ingia Zukiç</h2>
 
     <p>Karibu tena kwenye Zukiç</p>
+    <p style="margin-top:15px;">
+  Huna account?
+  <a href="#signup">Tengeneza Account</a>
+    </p>
 
     <br>
 
@@ -467,6 +471,48 @@
     </button>
 
     <p id="loginMessage"></p>
+
+  </div>
+
+</section>
+  <!-- SIGN UP -->
+<section id="signup" class="profile">
+
+  <div class="profile-card">
+
+    <h2>📝 Tengeneza Account</h2>
+
+    <p>Jiunge na Zukiç leo</p>
+
+    <br>
+
+    <input
+      id="signupUsername"
+      type="text"
+      placeholder="Chagua Username"
+      style="width:100%; padding:12px; border:1px solid #ddd; border-radius:8px;"
+    >
+
+    <br><br>
+
+    <input
+      id="signupPassword"
+      type="password"
+      placeholder="Tengeneza Password"
+      style="width:100%; padding:12px; border:1px solid #ddd; border-radius:8px;"
+    >
+
+    <br><br>
+
+    <button
+      type="button"
+      class="follow-btn"
+      onclick="signupUser()"
+    >
+      Tengeneza Account
+    </button>
+
+    <p id="signupMessage"></p>
 
   </div>
 
@@ -571,6 +617,29 @@
 
   message.textContent =
     "✅ Umeingia Zukiç! Karibu " + username;
+
+    }
+    function signupUser() {
+
+  const username =
+    document.getElementById("signupUsername").value.trim();
+
+  const password =
+    document.getElementById("signupPassword").value.trim();
+
+  const message =
+    document.getElementById("signupMessage");
+
+  if (username === "" || password === "") {
+
+    message.textContent =
+      "⚠️ Tafadhali jaza username na password.";
+
+    return;
+  }
+
+  message.textContent =
+    "✅ Account ya " + username + " imetengenezwa!";
 
     }
   </script>
