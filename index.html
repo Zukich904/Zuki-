@@ -144,7 +144,17 @@ nav a:hover {
   ❤️ <span id="likeCount">0</span>
       </button>
 &nbsp;&nbsp;
-💬 0 &nbsp;&nbsp; ↗️ Share
+<div style="margin-top:15px;">
+  <input id="commentInput" type="text" placeholder="Andika comment..."
+    style="padding:10px; width:70%; border:1px solid #ddd; border-radius:8px;">
+
+  <button onclick="addComment()"
+    style="padding:10px 15px; border:none; border-radius:8px; cursor:pointer;">
+    Tuma
+  </button>
+
+  <div id="comments" style="margin-top:15px;"></div>
+</div>
     </div>
   </div>
 
@@ -176,6 +186,20 @@ nav a:hover {
   function likePost() {
     likes++;
     document.getElementById("likeCount").textContent = likes;
+  }
+  <script>
+  function addComment() {
+    const input = document.getElementById("commentInput");
+    const comments = document.getElementById("comments");
+
+    if (input.value.trim() !== "") {
+      const comment = document.createElement("p");
+      comment.textContent = "💬 " + input.value;
+      comment.style.marginBottom = "8px";
+
+      comments.appendChild(comment);
+      input.value = "";
+    }
   }
 </script>
 </body>
