@@ -429,7 +429,48 @@
 
   </section>
 
+  <!-- LOGIN -->
+<section id="login" class="profile">
 
+  <div class="profile-card">
+
+    <h2>🔐 Ingia Zukiç</h2>
+
+    <p>Karibu tena kwenye Zukiç</p>
+
+    <br>
+
+    <input
+      id="loginUsername"
+      type="text"
+      placeholder="Username"
+      style="width:100%; padding:12px; border:1px solid #ddd; border-radius:8px;"
+    >
+
+    <br><br>
+
+    <input
+      id="loginPassword"
+      type="password"
+      placeholder="Password"
+      style="width:100%; padding:12px; border:1px solid #ddd; border-radius:8px;"
+    >
+
+    <br><br>
+
+    <button
+      type="button"
+      class="follow-btn"
+      onclick="loginUser()"
+    >
+      Ingia
+    </button>
+
+    <p id="loginMessage"></p>
+
+  </div>
+
+</section>
   <!-- FOOTER -->
   <footer>
     <p>© 2026 Zukiç. All rights reserved.</p>
@@ -509,7 +550,29 @@
         "Followers: " + followers;
 
     }
+  function loginUser() {
 
+  const username =
+    document.getElementById("loginUsername").value.trim();
+
+  const password =
+    document.getElementById("loginPassword").value.trim();
+
+  const message =
+    document.getElementById("loginMessage");
+
+  if (username === "" || password === "") {
+
+    message.textContent =
+      "⚠️ Tafadhali jaza username na password.";
+
+    return;
+  }
+
+  message.textContent =
+    "✅ Umeingia Zukiç! Karibu " + username;
+
+    }
   </script>
 
 </body>
