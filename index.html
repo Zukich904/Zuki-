@@ -4,10 +4,134 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Zukiç</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f4f7fb;
+      color: #111827;
+    }
+
+    header {
+      background: #111827;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      color: #d1d5db;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+      background: white;
+    }
+
+    .hero h2 {
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #6b7280;
+      margin-bottom: 25px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 13px 25px;
+      background: #111827;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      padding: 35px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #6b7280;
+      line-height: 1.5;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #111827;
+      color: white;
+      margin-top: 20px;
+    }
+  </style>
 </head>
 
 <body>
-  <h1>Karibu Zukiç</h1>
-  <p>Hii ni application yangu ya Zukiç.</p>
+
+  <header>
+    <h1>Zukiç</h1>
+    <p>Karibu kwenye ulimwengu wa Zukiç</p>
+  </header>
+
+  <section class="hero">
+    <h2>Karibu Zukiç 👋</h2>
+    <p>Mahali pa kuonyesha mawazo, ubunifu na huduma za Zukiç.</p>
+    <a href="#" class="button">Anza Sasa</a>
+  </section>
+
+  <section class="features">
+
+    <div class="card">
+      <h3>🎬 Video Editing</h3>
+      <p>Tengeneza na hariri video zako kwa ubunifu.</p>
+    </div>
+
+    <div class="card">
+      <h3>⚽ Football</h3>
+      <p>Shiriki na kufuatilia maudhui yako ya mpira.</p>
+    </div>
+
+    <div class="card">
+      <h3>🌱 Kilimo</h3>
+      <p>Weka pamoja maarifa na mawazo kuhusu kilimo.</p>
+    </div>
+
+  </section>
+
+  <footer>
+    <p>© 2026 Zukiç. Haki zote zimehifadhiwa.</p>
+  </footer>
+
 </body>
 </html>
