@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zukiç</title>
+
+  <title>Zukiç - Social Media</title>
 
   <style>
     * {
@@ -16,189 +17,500 @@
     body {
       background: #f4f7fb;
       color: #111827;
+      padding-bottom: 70px;
     }
 
+    /* HEADER */
     header {
       background: #111827;
       color: white;
-      padding: 20px;
+      padding: 18px 15px;
       text-align: center;
-    }nav {
-  margin-bottom: 20px;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  margin: 0 8px;
-  font-weight: bold;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
 
     header h1 {
-      font-size: 32px;
-      margin-bottom: 8px;
-    }
-
-    header p {
-      color: #d1d5db;
-    }
-
-    .hero {
-      text-align: center;
-      padding: 60px 20px;
-      background: white;
-    }
-
-    .hero h2 {
       font-size: 30px;
-      margin-bottom: 15px;
+      margin-bottom: 12px;
     }
 
-    .hero p {
-      font-size: 18px;
-      color: #6b7280;
-      margin-bottom: 25px;
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      flex-wrap: wrap;
     }
 
-    .button {
-      display: inline-block;
-      padding: 13px 25px;
-      background: #111827;
+    nav a {
       color: white;
       text-decoration: none;
-      border-radius: 8px;
       font-weight: bold;
+      font-size: 14px;
     }
 
-    .features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-      padding: 35px 20px;
-      max-width: 1000px;
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* HOME */
+    .home {
+      max-width: 700px;
       margin: auto;
+      padding: 25px 15px;
     }
 
-    .card {
+    .welcome {
       background: white;
       padding: 25px;
-      border-radius: 12px;
+      border-radius: 15px;
+      margin-bottom: 20px;
       text-align: center;
       box-shadow: 0 3px 12px rgba(0,0,0,0.08);
     }
 
-    .card h3 {
+    .welcome h2 {
       margin-bottom: 10px;
     }
 
-    .card p {
+    .welcome p {
       color: #6b7280;
+    }
+
+    /* POST */
+    .post {
+      background: white;
+      border-radius: 15px;
+      margin-bottom: 20px;
+      overflow: hidden;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    }
+
+    .post-header {
+      display: flex;
+      align-items: center;
+      padding: 15px;
+    }
+
+    .avatar {
+      width: 45px;
+      height: 45px;
+      background: #111827;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      margin-right: 12px;
+    }
+
+    .post-header h3 {
+      font-size: 16px;
+    }
+
+    .post-header p {
+      font-size: 12px;
+      color: #6b7280;
+      margin-top: 3px;
+    }
+
+    .post-text {
+      padding: 0 15px 15px;
       line-height: 1.5;
     }
 
-    footer {
-      text-align: center;
-      padding: 25px;
+    .video-box {
+      height: 280px;
       background: #111827;
       color: white;
-      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 55px;
+    }
+
+    .post-actions {
+      display: flex;
+      justify-content: space-around;
+      padding: 14px;
+      border-top: 1px solid #eee;
+      border-bottom: 1px solid #eee;
+    }
+
+    .action-btn {
+      border: none;
+      background: none;
+      cursor: pointer;
+      font-size: 15px;
+      font-weight: bold;
+    }
+
+    .action-btn:hover {
+      opacity: 0.7;
+    }
+
+    /* COMMENTS */
+    .comment-area {
+      padding: 15px;
+    }
+
+    .comment-area input {
+      width: 70%;
+      padding: 11px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      outline: none;
+    }
+
+    .comment-area button {
+      padding: 11px 15px;
+      border: none;
+      background: #111827;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .comments {
+      margin-top: 15px;
+    }
+
+    .comment {
+      background: #f4f7fb;
+      padding: 9px;
+      border-radius: 8px;
+      margin-bottom: 8px;
+    }
+
+    /* PROFILE */
+    .profile {
+      max-width: 700px;
+      margin: 25px auto;
+      padding: 25px 15px;
+    }
+
+    .profile-card {
+      background: white;
+      border-radius: 15px;
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    }
+
+    .profile-avatar {
+      width: 90px;
+      height: 90px;
+      background: #111827;
+      color: white;
+      border-radius: 50%;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 35px;
+      font-weight: bold;
+    }
+
+    .profile-card h2 {
+      margin-top: 15px;
+    }
+
+    .profile-card p {
+      color: #6b7280;
+      margin-top: 8px;
+    }
+
+    .follow-btn {
+      margin-top: 15px;
+      padding: 11px 25px;
+      background: #111827;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    /* SEARCH */
+    .search {
+      max-width: 700px;
+      margin: 25px auto;
+      padding: 0 15px;
+    }
+
+    .search-box {
+      background: white;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    }
+
+    .search-box input {
+      width: 100%;
+      padding: 13px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      outline: none;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #111827;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 25px;
+    }
+
+    /* MOBILE */
+    @media (max-width: 600px) {
+      nav {
+        gap: 10px;
+      }
+
+      nav a {
+        font-size: 12px;
+      }
+
+      .video-box {
+        height: 230px;
+      }
+
+      .comment-area input {
+        width: 65%;
+      }
     }
   </style>
 </head>
 
 <body>
 
+  <!-- HEADER -->
   <header>
-    <nav>
-  <a href="#home">Home</a>
-  <a href="#about">About</a>
-  <a href="#services">Services</a>
-  <a href="#football">Football</a>
-  <a href="#contact">Contact</a>
-    </nav>
     <h1>Zukiç</h1>
-    <p>Karibu kwenye ulimwengu wa Zukiç</p>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#search">Search</a>
+      <a href="#profile">Profile</a>
+    </nav>
   </header>
 
-  <section class="hero">id="home".
-    <h2>Karibu Zukiç 👋</h2>
-    <p>Mahali pa kuonyesha mawazo, ubunifu na huduma za Zukiç.</p>
-    <a href="#" class="button">Anza Sasa</a>
-  <section class="features" id="posts">
 
-  <div class="card">
-    <h3>👤 Zukich</h3>
-    <p>Karibu kwenye Zukiç! Hapa ndipo posts na video zitaonekana.</p>
-    <div style="margin-top:15px;">
-  <p>🎬 Video ya Zukiç</p>
-  <div style="background:#111827; height:250px; border-radius:12px; display:flex; align-items:center; justify-content:center; color:white; font-size:40px;">
-    ▶️
-  </div>
+  <!-- HOME / FEED -->
+  <main class="home" id="home">
+
+    <div class="welcome">
+      <h2>Karibu Zukiç 👋</h2>
+      <p>
+        Shiriki picha, video, mawazo na ubunifu wako
+        na watu wengine.
+      </p>
     </div>
-    <div style="margin-top:15px;">
-      <button onclick="likePost()" style="border:none; background:none; font-size:16px; cursor:pointer;">
-  ❤️ <span id="likeCount">0</span>
+
+
+    <!-- POST -->
+    <article class="post">
+
+      <div class="post-header">
+
+        <div class="avatar">
+          Z
+        </div>
+
+        <div>
+          <h3>Zukich</h3>
+          <p>@zukich • Dakika chache zilizopita</p>
+        </div>
+
+      </div>
+
+
+      <div class="post-text">
+        Karibu kwenye Zukiç! 🚀
+        Hapa ndipo safari ya social media yetu inaanzia.
+      </div>
+
+
+      <div class="video-box">
+        ▶️
+      </div>
+
+
+      <!-- ACTIONS -->
+      <div class="post-actions">
+
+        <button class="action-btn" onclick="likePost()">
+          ❤️ <span id="likeCount">0</span>
+        </button>
+
+        <button class="action-btn" onclick="focusComment()">
+          💬 Comment
+        </button>
+
+        <button class="action-btn" onclick="sharePost()">
+          ↗️ Share
+        </button>
+
+      </div>
+
+
+      <!-- COMMENTS -->
+      <div class="comment-area">
+
+        <input
+          id="commentInput"
+          type="text"
+          placeholder="Andika comment..."
+        >
+
+        <button type="button" onclick="addComment()">
+          Tuma
+        </button>
+
+        <div class="comments" id="comments"></div>
+
+      </div>
+
+    </article>
+
+  </main>
+
+
+  <!-- SEARCH -->
+  <section class="search" id="search">
+
+    <div class="search-box">
+
+      <h2>🔍 Search</h2>
+
+      <br>
+
+      <input
+        type="text"
+        placeholder="Tafuta mtu, video au post..."
+      >
+
+    </div>
+
+  </section>
+
+
+  <!-- PROFILE -->
+  <section class="profile" id="profile">
+
+    <div class="profile-card">
+
+      <div class="profile-avatar">
+        Z
+      </div>
+
+      <h2>Zukich</h2>
+
+      <p>@zukich</p>
+
+      <p>
+        Content Creator • Video Editing • Football • Kilimo
+      </p>
+
+      <button
+        class="follow-btn"
+        onclick="followUser()"
+      >
+        Follow
       </button>
-&nbsp;&nbsp;
-<div style="margin-top:15px;">
-  <input id="commentInput" type="text" placeholder="Andika comment..."
-    style="padding:10px; width:70%; border:1px solid #ddd; border-radius:8p
-    style="padding:10px 15px; border:none; border-radius:8px; cursor:pointer;">
-    Tuma
-  </button>
-   <button type="button" onclick="addComment()">
-  <div id="comments" style="margin-top:15px;"></div>
-</div>
-    </div>
-  </div>
 
-  </section>
+      <p id="followers">
+        Followers: 0
+      </p>
 
-    <div class="card">
-      <h3>🎬 Video Editing</h3>
-      <p>Tengeneza na hariri video zako kwa ubunifu.</p>
-    </div>
-
-    <div class="card">
-      <h3>⚽ Football</h3>
-      <p>Shiriki na kufuatilia maudhui yako ya mpira.</p>
-    </div>
-
-    <div class="card">
-      <h3>🌱 Kilimo</h3>
-      <p>Weka pamoja maarifa na mawazo kuhusu kilimo.</p>
     </div>
 
   </section>
 
+
+  <!-- FOOTER -->
   <footer>
-    <p>© 2026 Zukiç. Haki zote zimehifadhiwa.</p>
+    <p>© 2026 Zukiç. All rights reserved.</p>
   </footer>
-<script>
-  let likes = 0;
 
-  function likePost() {
-    likes++;
-    document.getElementById("likeCount").textContent = likes;
-  }
+
+  <!-- JAVASCRIPT -->
   <script>
-  function addComment() {
-    const input = document.getElementById("commentInput");
-    const comments = document.getElementById("comments");
 
-    if (input.value.trim() !== "") {
-      const comment = document.createElement("p");
-      comment.textContent = "💬 " + input.value;
-      comment.style.marginBottom = "8px";
+    let likes = 0;
+    let followers = 0;
+
+
+    function likePost() {
+
+      likes++;
+
+      document.getElementById("likeCount").textContent = likes;
+
+    }
+
+
+    function addComment() {
+
+      const input =
+        document.getElementById("commentInput");
+
+      const comments =
+        document.getElementById("comments");
+
+      const text =
+        input.value.trim();
+
+
+      if (text === "") {
+        return;
+      }
+
+
+      const comment =
+        document.createElement("div");
+
+      comment.className = "comment";
+
+      comment.textContent =
+        "💬 " + text;
+
 
       comments.appendChild(comment);
+
       input.value = "";
+
     }
-  }
-</script>
+
+
+    function focusComment() {
+
+      document
+        .getElementById("commentInput")
+        .focus();
+
+    }
+
+
+    function sharePost() {
+
+      alert("Share feature iko tayari kujengwa 🚀");
+
+    }
+
+
+    function followUser() {
+
+      followers++;
+
+      document.getElementById("followers").textContent =
+        "Followers: " + followers;
+
+    }
+
+  </script>
+
 </body>
 </html>
